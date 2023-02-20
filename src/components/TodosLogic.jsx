@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 import InputTodo from './InputTodo';
 import TodosList from './TodosList';
 
-const getInitialTodos = () => {
+function getInitialTodos() {
   const temp = localStorage.getItem('todos');
   const savedTodos = JSON.parse(temp);
   return savedTodos || [];
