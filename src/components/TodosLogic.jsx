@@ -7,7 +7,7 @@ function getInitialTodos() {
   const temp = localStorage.getItem('todos');
   const savedTodos = JSON.parse(temp);
   return savedTodos || [];
-};
+}
 
 function TodosLogic() {
   const [todos, setTodos] = useState(getInitialTodos());
@@ -30,11 +30,7 @@ function TodosLogic() {
     }));
   };
   const delTodo = (id) => {
-    setTodos([
-      ...todos.filter((todo) => {
-        return todo.id !== id;
-      }),
-    ]);
+    setTodos([...todos.filter((todo) => todo.id !== id)]);
   };
   const addTodoItem = (title) => {
     const newTodo = {
